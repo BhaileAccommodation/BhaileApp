@@ -1,0 +1,149 @@
+body {
+  background: #fcfcfc;
+  color: #333333;
+  margin-top: 5rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.page-title {
+  color: #1a6c7a;
+  font-size: 30px;
+}
+
+h1, h4, h5, h6 {
+  color: #1a6c7a;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #c8bca5;
+}
+
+.site-header .navbar-brand:hover {
+  color: #1a6c7a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #1a6c7a;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link:active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.site-header .navbar-nav .dropdown-menu {
+  background-color: #c8bca5;
+}
+
+.site-header .navbar-nav .dropdown-menu .nav-link {
+  color: #1a6c7a;
+}
+
+.site-header .navbar-nav .dropdown-menu .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .dropdown-menu .nav-link:active {
+  color: #ffffff;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 4px 4px 4px #ebebeb;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.content-section .text-right .bk {
+  background: #ffffff;
+  color: #1a6c7a;
+  border: 2px solid #1a6c7a;
+}
+
+.content-section .text-right .bk:hover {
+  background: #1a6c7a;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+.article-title {
+  color: #444444;
+  font-size: 25px;
+}
+
+a.article-title:hover {
+  color: #1a6c7a;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.article-metadata a {
+  color: #c8bca5;
+  font-weight: 700;
+}
+
+.article-metadata a:hover {
+  color: #1a6c7a;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.pagination .btn {
+  color: #c8bca5;
+  font-weight: 700;
+  border: 1px solid #444444;
+  margin: 4px;
+}
+
+.pagination .btn:hover {
+  color: #c8bca5;
+  background-color: #ffffff;
+}

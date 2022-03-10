@@ -1,0 +1,33 @@
+{% extends 'properties/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src=" {{ accommodation_author.profile.image.url }}">
+        <div class="media-body">
+            <div class="mt-4 mb-2 article-metadata">
+                <a class="mr-2" href="{% url 'profile' %}">{{ accommodation_author }}</a>
+                <small class="text-muted">{{ accommodation_date_posted|date:"F d, Y: P" }} </small>
+                {% if accommodation_author == user %}
+                    <div class="text-right">
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' accommodation_id %}">Update</a>
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' accommodation_id %}">Delete</a>
+                    </div>
+                {% endif %}
+            </div>
+            <h2><a class="article-title">{{ accommodation_title }}</a></h2>
+            <h3 class="article-content">Property Details: </h3>
+            <p class="article-content">  {{ accommodation_category }}</p>
+            <p class="article-content">  {{ accommodation_content }}</p>
+            <h3 class="article-content">Capacity: </h3>
+            <p class="article-content">  {{ accommodation_capacity }}</p>
+
+            <form class="form-inline my-2 my-lg-0" action="" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-outline-info my-2 my-sm-0 btn-sm" type="submit">Book Accommodation</button>
+            </form>
+        </div>
+    </article>
+
+{% endblock content %}

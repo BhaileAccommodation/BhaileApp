@@ -1,0 +1,22 @@
+{% extends 'properties/base.html' %}
+<!---Use crispy for styling--->
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <!----csrf protects form against attacks------>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Delete Booking</legend>
+                <h3>Are you sure you want to delete the booking:</h3>
+                <h3>Title: {{ object.accommodation }}</h3>
+                <h3>Type: {{ object.get_accommodation_category }} </h3>
+                <h3>From {{ object.move_in}} to {{ object.move_out }}</h3>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                <a class="btn btn-outline-secondary" href="{% url 'booking-detail' object.id %}" >Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
